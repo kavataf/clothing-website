@@ -1,0 +1,517 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+:root{
+    --maincolor: #4b50bd;
+    --black: #282424;
+    --border: #999797;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+    overflow-x: hidden;
+}
+body{
+    background: #dedddd;
+}
+.btn{
+    margin: 1rem;
+    padding: 1rem;
+    width: 20rem;
+    border-radius: 10px;
+    font-size:1.8rem;
+    background: #999999;
+    transition: .5s ease;
+}
+.btn:hover{
+    background: var(--maincolor);
+    color: var(--black);
+    
+}
+.heading{
+    background: #8b8989;
+    top: 0; bottom: 1rem;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #fff;
+    word-spacing: .5rem;
+    z-index: 1000;
+}
+.heading span{
+    color: var(--maincolor);
+}
+section{
+    padding: 5rem 7%;
+}
+.header{
+    top: 0;
+    display: flex;
+    position: fixed;
+    padding: .5rem;
+    width: 100%;
+    border-bottom: 2px solid var(--border);
+    background: #504f4f;
+    z-index: 2;
+}
+.logo{
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    margin-left: 1rem;
+}
+.logo span{
+    color: var(--maincolor);
+    font-size: 3rem;
+}
+.links{
+    display: flex;
+    margin: 1.5rem auto;
+    transition: .5s ease;
+}
+.links.active{
+    right: 7%;
+}
+.links a{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bolder;
+    transition: .5s ease;
+}
+.links a:hover{
+    color: var(--maincolor);
+}
+
+.icons{
+    display: flex;
+    margin: 1rem auto;
+}
+.icons div i{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    transition: .5s ease;
+}
+.icons div i:hover{
+    color: var(--maincolor);
+    transform: translateY(1);
+}
+.menu-btn{
+    display: none;
+}
+.home .container{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.home .container .slider{
+    margin-top: 5%;
+}
+.home .container .slider .wrapper{
+    float: left;
+    width: 100%;
+    display: flex;
+    margin: 1rem;
+    padding: .5rem;
+    gap: 8.2rem;
+    text-align: center;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+}
+.home .container .slider .wrapper .content{
+   margin-top: 10rem;
+   padding: 1rem;
+   width: 40rem;
+}
+.home .container .slider .wrapper .content h3{
+    font-size: 5rem;
+    line-height: 4.5rem;
+    color: var(--black);
+}
+.home .container .slider .wrapper .content h3 span{
+    font-size: 2.2rem;
+    color: #8b8989;
+}
+.home .container .slider .wrapper .content p{
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 400;
+}
+.home .container .slider .wrapper .content p span{
+    color: var(--maincolor);
+    font-weight: bolder;
+}
+.home .container .slider .wrapper .image{
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about .row{
+    margin-top: 1.5rem;
+}
+.about .row .box{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5rem;
+}
+.about .row .box .content{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+.about .row .box .content p{
+    font-size: 2rem;
+    
+}
+.categories .btn-container{
+    margin: 5rem 20%;
+    align-items: center;
+}
+.categories .btn-container .filter-btn{
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 0px #999999;
+    transition: .5s ease;
+    color: #333;
+    background: #c2c0c0;
+    cursor: pointer;
+    animation: colorpop 1s infinite;
+}
+@keyframes colorpop {
+    0% { box-shadow: 5px 5px 10px 0px #70b6e4; transform: scale(1);}
+    50% { box-shadow: 5px 5px 10px 0px #778ae6; transform: scale(1.1);}
+    100% { box-shadow: 5px 5px 10px 0px #a37eb8; transform: scale(1);}
+}
+.categories .btn-container .filter-btn:hover{
+    background: var(--maincolor);
+    transform: translateX(1rem);
+    color: #fff;
+}
+.categories .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+.categories .box-container .box{
+    padding: 2rem;
+    align-items: center;
+}
+.categories .box-container .box .image{
+    width: 100%;
+    border: 2px solid var(--border);
+    padding: .5rem;
+    border-radius: 50%;
+    box-shadow: 10px 5px 10px 0px #999999;
+    transition: .5s ease;
+}
+.categories .box-container .box .image:hover{
+    box-shadow: 10px 5px 10px 0px var(--maincolor);
+    transform: scale(1.1);
+}
+.categories .box-container .box .item-info{
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+}
+.categories .box-container .box .item-info header{
+    font-size: 1.8rem;
+    color: #333;
+}
+.categories .box-container .box .item-info header .price{
+    padding: .5rem;
+    font-size: 1.5rem;
+}
+.categories .box-container .box .item-info header .price span{
+    color: #878686;
+    text-decoration: line-through;
+}
+.categories .box-container .box .item-info .item-text{
+    padding: .8rem;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+}
+.reviews .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap: 1.5rem;
+}
+.reviews .box-container .box{
+    margin-top: 5rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    border: 2px solid var(--border);
+}
+.reviews .box-container .box .qoutes{
+    font-size: 4rem;
+    color: var(--maincolor);
+}
+.reviews .box-container .box .name{
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: #333;
+}
+.reviews .box-container .box .text{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    padding: 2rem 0;
+    color: #333;
+}
+.reviews .box-container .box .image{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.reviews .box-container .box .icon{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: var(--maincolor);
+}
+.contacts .box{
+    margin: 5rem 3rem;
+    background: #6c6b6b;
+    padding: 2rem;
+}
+.contact .row form{
+    flex: 0 1 45rem;
+}
+.contacts .box form div{
+    margin: 2rem;
+}
+.contacts .box form div label{
+    font-size: 1.5rem;
+    color: #333;
+}
+.contacts .box form div input{
+    font-size: 1.5rem;
+    padding: 1rem;
+    background: transparent;
+    border: 1px solid var(--border);
+}
+.contacts .box form div input::placeholder{
+    color: #fff;
+}
+.contacts .box form div input:focus {
+    border: 2px solid var(--maincolor);
+}
+.contacts .box form div textarea{
+    font-size: 1.5rem;
+    padding: 1rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    overflow-y: scroll;
+    resize: none;
+}
+.contacts .box form div textarea::placeholder{
+    color: #fff;
+}
+.contacts .box form #submit{
+    padding: 1rem;
+    margin-left: 2rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+.contacts .box form #submit:hover{
+    background: var(--maincolor);
+    color: #fff;
+    transform: scale(1.1);
+}
+@keyframes slide-in {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+input {
+    animation: slide-in 1s ease-in-out;
+}
+.footer {
+    text-align: center;
+    padding: 1rem 0;
+}
+.footer .social{
+    padding: 1rem;
+    font-size: 2rem;
+}
+.footer .social i{
+    padding: 1rem;
+    margin: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    transition: .5s ease;
+}
+.footer .social i:hover{
+    background: var(--maincolor);
+    color: #fff;
+}
+.footer .link{
+    padding: 1rem;
+    font-size: 2rem;
+}
+.footer .link a{
+    text-decoration: none;
+    color: #333;
+    padding: 1rem;
+    margin: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: .5s ease;
+}
+.footer .link a:hover{
+    background: var(--maincolor);
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 991px){
+html{
+    font-size: 55%;
+}
+.header{
+    padding: 1rem;
+}
+.home{
+    padding: 1rem;
+}
+.home .container .slider .wrapper{
+    gap: 6rem;
+}
+.about {
+    padding: 2rem;
+}
+.about .row .box{
+    gap: 3rem;
+}
+.about .row .box .content{
+    font-size: 1rem;
+}
+.about .row .image img{
+    width: 100%;
+}
+}
+@media (max-width: 768px){
+    .header{
+        padding: 1rem;
+    }
+    .links{
+        position: absolute;
+        top: 100%;right: -100%;
+        background: #878686;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+        color: #333;
+        display: block;
+        z-index: 2;
+    }
+    .links a{
+        display: block;
+        max-width: 100%;
+        margin: 1.5rem;
+        padding: 1rem;
+        font-size: 1.5rem;
+        background: #dedddd;
+        border-radius: 5px;
+    }
+    .links a:hover{
+        transform: translateX(10px);
+    }
+    .menu-btn{
+        display: inline-block;
+    }
+    .home .container .slider .wrapper{
+        font-size: 50%;
+        padding: 2rem;
+        margin-top: -7rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        overflow: hidden;
+        width: 45rem;
+        
+    } 
+    .home .container .slider .wrapper .image img{
+        width: 55rem;
+        height: 100%;
+        margin-left: -7rem;
+    }
+    .about .row .box{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .about .row .box .image img{
+        margin-left: -7rem;
+        width: 100%;
+        border: none;
+    }
+    .about .row .box .content{
+        width: 80%;
+    }
+    .contacts .box form div textarea{
+        width: 80%;
+    }
+    .footer .social{
+        padding: .5rem;
+        margin: 1rem;
+    }
+     
+
+}
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+    .home .container .slider .wrapper{
+        padding: 2rem;
+    }
+    .home .container .slider .wrapper .image{
+        width: 55rem;
+        height: 100%;
+        margin-left: -7rem;
+    }
+    .about .row .box .image img{
+        padding: 1rem;
+        width: 100%;
+    }
+    .reviews .box-container .box{
+        padding: 1.5rem 1rem;
+    }
+    .contacts .box form div textarea{
+        width: 100%;
+    }
+    .contacts .box form div input{
+        width: 90%;
+    }
+    .footer .link a{
+        display: block; 
+ 
+     }  
+
+}
